@@ -17,10 +17,15 @@ Product.defaultProps = {
   hasWatermark: false
 }
 
+var weight_range = [];                                                          
+for (var i = 80; i <= 300; i++) {                                               
+  weight_range.push(i);                                                         
+}
+
 Product.PropTypes = {
   name: PropType.string.isRequired,
   producer: PropType.string,
   hasWatermark: PropType.bool,
   color: PropType.string.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: PropType.number.isRequired
+  weight: PropType.number.oneOf(weight_range).isRequired
 }
