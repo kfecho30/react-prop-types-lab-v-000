@@ -16,3 +16,11 @@ export default class Product extends React.Component {
 Product.defaultProps = {
   hasWatermark: false
 }
+
+Product.PropTypes = {
+  name: PropType.string.isRequired,
+  producer: PropType.string,
+  hasWatermark: PropType.bool,
+  color: PropType.string.isRequired,
+  weight: PropType.number.isRequired
+}
